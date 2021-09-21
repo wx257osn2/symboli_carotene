@@ -1,0 +1,7 @@
+{
+    "save": {
+        "request": false,
+        "response": true
+    },
+    "export_directory": "./Carotene/"
+}
