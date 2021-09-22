@@ -2,7 +2,7 @@
 
 > _Eclipse first, the rest nowhere._
 
-Symboli Carotene dumpes the communication payload of some applications.
+Symboli Carotene dumps the communication payload of some applications.
 
 ## Build
 
