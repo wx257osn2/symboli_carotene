@@ -1,8 +1,8 @@
-# Symboli Carotene
+# Symboli Carotene Core
 
 > _Eclipse first, the rest nowhere._
 
-Symboli Carotene dumps the communication payload of some applications.
+Symboli Carotene Core is the core utility to handle the communication payload of some applications.
 
 ## Build
 
