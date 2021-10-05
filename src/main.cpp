@@ -72,25 +72,6 @@ static inline BOOL process_attach(HINSTANCE hinst){
 	const std::filesystem::path plugin_path{will::get_module_file_name(hinst).value()};
 	prelude =+ symboli::prelude::create(plugin_path.parent_path()/"symboli_prelude.dll");
 
-	std::ifstream config_file{(plugin_path.parent_path()/plugin_path.stem()).concat(".config.json")};
-	if(config_file.is_open())try{
-		nlohmann::json j;
-		config_file >> j;
-		config = j.get<config_t>();
-		if(config.export_directory.is_relative())
-			config.export_directory = plugin_path.parent_path()/config.export_directory;
-		const bool exists = std::filesystem::exists(config.export_directory);
-		if(exists && !std::filesystem::is_directory(config.export_directory))
-			throw std::runtime_error("Symboli Carotene: " + config.export_directory.string() + " is not directory");
-		if(!exists)
-			std::filesystem::create_directories(config.export_directory);
-		std::cout << "Symboli Carotene config: \n"
-		             "  save: {.request: " << config.save.request << ", .response: " << config.save.response << "}\n"
-		             "  export_directory: " << config.export_directory << std::endl;
-	}catch(std::exception& e){
-		::MessageBoxA(nullptr, e.what(), "Symboli Renderer exception", MB_OK|MB_ICONWARNING|MB_SETFOREGROUND);
-	}
-
 	prelude->enqueue_task([]{
 		auto libnative =+ will::get_module_handle(_T("libnative.dll"));
 		const auto LZ4_decompress_safe_ext =+ libnative.get_proc_address<int(char*, char*, int, int)>("LZ4_decompress_safe_ext");

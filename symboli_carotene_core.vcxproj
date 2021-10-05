@@ -75,8 +75,7 @@
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(SolutionDir)bin
-copy $(OutDirFullPath)$(TargetFileName) $(SolutionDir)$(BaseOutputPath)$(TargetName).symboli
-if not exist $(SolutionDir)$(BaseOutputPath)$(TargetName).config.json copy $(SolutionDir)$(TargetName).config.json.sample $(SolutionDir)$(BaseOutputPath)$(TargetName).config.json</Command>
+copy $(OutDirFullPath)$(TargetFileName) $(SolutionDir)$(BaseOutputPath)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -97,8 +96,7 @@ if not exist $(SolutionDir)$(BaseOutputPath)$(TargetName).config.json copy $(Sol
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(SolutionDir)bin
-copy $(OutDirFullPath)$(TargetFileName) $(SolutionDir)$(BaseOutputPath)$(TargetName).symboli
-if not exist $(SolutionDir)$(BaseOutputPath)$(TargetName).config.json copy $(SolutionDir)$(TargetName).config.json.sample $(SolutionDir)$(BaseOutputPath)$(TargetName).config.json</Command>
+copy $(OutDirFullPath)$(TargetFileName) $(SolutionDir)$(BaseOutputPath)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
