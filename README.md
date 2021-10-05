@@ -6,7 +6,7 @@ Symboli Carotene Core is the core utility to handle the communication payload of
 
 ## Build
 
-Open `symboli_carotene.sln` and build it.
+Open `symboli_carotene_core.sln` and build it.
 Of course you can use `msbuild` :
 
 ```bat
