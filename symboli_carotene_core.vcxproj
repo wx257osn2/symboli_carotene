@@ -53,13 +53,13 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir).vs\$(ProjectName)\out\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\$(ProjectName)\intermediate\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir).dependencies\symboli_prelude\include;$(SolutionDir).dependencies\will\include;$(SolutionDir)include;$(SolutionDir).dependencies\nlohmann_json\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).dependencies\symboli_prelude\include;$(SolutionDir).dependencies\will\include;$(SolutionDir)include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir).vs\$(ProjectName)\out\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\$(ProjectName)\intermediate\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir).dependencies\symboli_prelude\include;$(SolutionDir).dependencies\will\include;$(SolutionDir)include;$(SolutionDir).dependencies\nlohmann_json\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).dependencies\symboli_prelude\include;$(SolutionDir).dependencies\will\include;$(SolutionDir)include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
